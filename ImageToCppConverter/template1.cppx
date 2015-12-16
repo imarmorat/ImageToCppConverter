@@ -1,0 +1,13 @@
+﻿@model ImageToCppConverter.ImageData
+
+const int @string.Format("{0}_height = {1};", Model.Name, Model.Height) 
+const int @string.Format("{0}_width = {1};", Model.Name, Model.Width) 
+const int @Model.Name [] = 
+{
+@for(int x=0; x<Model.Width; x++)
+{
+	for(int y=0; y<Model.Height; y++)
+	{ <text>@string.Format("0x{0:X4}{1}",  Model.Pixels[ x * Model.Width + y], (x == Model.Width - 1) && (y == Model.Height - 1) ? "" : ","  )</text> }
+	 <text>@string.Format("\r\n")</text>
+}
+};
