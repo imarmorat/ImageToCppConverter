@@ -193,4 +193,8 @@ FakesAssemblies/
 *.plg
 
 # Visual Studio 6 workspace options file
+<<<<<<< HEAD
 *.opt
+=======
+*.opt
+>>>>>>> 96c4314186556043c173d13378f2880bf79901ca
